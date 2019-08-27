@@ -1,22 +1,23 @@
-import java.util.Scanner;
-
+import java.lang.reflect.Array;
+import java.util.Arrays;
 public class Main {
   public static void main(String[] args) {
 
-    Scanner sc = new Scanner(System.in);
-    System.out.println("What's your user number?");
-    int userNumber = sc.nextInt();
-    System.out.println("Enter a word:");
-    String userInput = sc.next();
-    String upperUserInput = userInput.toUpperCase();
-    char firstUserChar = userInput.charAt(0);
-    System.out.println("Enter a search string: ");
-    String searchString = sc.next();
-    boolean hasDing = userInput.contains("ding".toLowerCase());
-    System.out.println("User #" + userNumber + " " + 
-                        upperUserInput + " " + firstUserChar + ". Has " + 
-                        searchString + "? "+ hasDing);
-    sc.close();
+    int[] numbers = new int[5];
+    numbers[0] = 31;
+    numbers[1] = 45;
+    numbers[2] = 22;
+    numbers[3] = 98;
+    numbers[4] = 10;
+    int[] inlineNumbers = { 31, 45, 22, 98, 10 };
+    
+    System.out.println(Arrays.toString(numbers));
+    Arrays.sort(numbers);
+    System.out.println(Arrays.toString(numbers));
 
+    String[] favoriteBooks = { "The Hobbit", "GEB", "Anthem", "Enchiridion" };
+
+    System.out.print(favoriteBooks[favoriteBooks.length-1] + " is the same as " + 
+                     Array.get(favoriteBooks, favoriteBooks.length-1));
   }
 }
