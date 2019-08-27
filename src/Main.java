@@ -1,10 +1,10 @@
-import java.awt.*;
-
 public class Main {
   public static void main(String[] args) {
-    Car fordTaurus = new Car(15, "48WI12", Color.ORANGE, false);
-    Car hondaFit = new Car(40, "C984EK", Color.LIGHT_GRAY, true);
-    hondaFit.setPaintColor(Color.GREEN);
-    System.out.println(hondaFit.paintColor.toString() + " " + fordTaurus.paintColor.toString());
+    String userInput = "reading";
+    String upperUserInput = userInput.toUpperCase();
+    char firstUserChar = userInput.charAt(0);
+    boolean hasDing = userInput.contains("ding");
+    System.out.println(upperUserInput + " " + firstUserChar + "Has ding? " + hasDing);
+
   }
 }
